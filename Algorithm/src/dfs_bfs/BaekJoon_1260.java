@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.*;
 
 //백준 1260번 문제
-public class BackJoon_1260 {
+public class BaekJoon_1260 {
 
 	static int arr[][];
 	static boolean check[];
@@ -23,11 +23,10 @@ public class BackJoon_1260 {
 		check = new boolean[N + 1];
 
 		for (int i = 1; i <= M; i++) {
-			System.out.println("? "+i);
-//			st = new StringTokenizer(br.readLine());
-//			int x = Integer.parseInt(st.nextToken());
-//			int y = Integer.parseInt(st.nextToken());
-//			arr[x][y] = arr[y][x] = 1;
+			st = new StringTokenizer(br.readLine());
+			int x = Integer.parseInt(st.nextToken());
+			int y = Integer.parseInt(st.nextToken());
+			arr[x][y] = arr[y][x] = 1;
 		}
 		dfs(V);
 		bw.flush();
